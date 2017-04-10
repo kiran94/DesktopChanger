@@ -1,6 +1,7 @@
+import json
+import random 
 from services.fileIOService import fileIOService
 from services.httpService import httpService
-import json
 
 # Services for Wallpaper operations
 class wallpaperService:
@@ -28,9 +29,15 @@ class wallpaperService:
     # Returns the latest wallpaper from the URL.
     def __parseWallpaperJSON(self):
         images = self.__getLatestWallpapers()
+        realPostIndex = 0
         for i in range(0, len(images)):
             if images[i]["data"]["distinguished"] != "moderator":
-                return images[i]["data"]["url"]
+                realPostIndex = i
+                break
+        
+        index = random.randrange(realPostIndex, len(images)-1)          
+        return images[index]["data"]["url"]
+
     
     # Returns a JSON of the URL. 
     def __getLatestWallpapers(self):
