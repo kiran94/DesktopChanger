@@ -18,7 +18,7 @@ class desktopService:
         set desktop picture to POSIX file "%s"
         end tell"""
 
-        subprocess.Popen(MacSCRIPT%filename, shell=True)
+        subprocess.Popen(MacSCRIPT%filename, shell=True).wait()
         
     # Changes the Windows OS wallpaper to the given filename. 
     def __setWindowsBackground(self, filename):
