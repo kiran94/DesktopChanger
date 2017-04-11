@@ -6,7 +6,7 @@ from services.httpService import httpService
 from services.wallpaperService import wallpaperService
 
 redditBaseUrl = "https://www.reddit.com"
-redditSubUrl = "Wallpaper"
+redditSubUrl = "EarthPorn"
 redditSubFormat = "json"
 redditSubCount = 20
 

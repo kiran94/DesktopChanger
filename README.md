@@ -1,6 +1,6 @@
 # DesktopChanger
 
-Python application that gets a random wallpaper from https://www.reddit.com/r/wallpaper/ and sets it to your desktop. Currently only working on MacOS. 
+Python application that gets a random wallpaper from https://www.reddit.com/r/EarthPorn/ and sets it to your desktop. Currently only working on MacOS. 
 
 To set this up you can add the following line to your `.bash_profile` file to run it anytime. 
 
